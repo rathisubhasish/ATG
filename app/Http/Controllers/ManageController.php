@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\DB;
 use App\Models\User;
 use Session;
 use Crypt;
-
+use App\Http\Controllers\Auth;
 
 class ManageController extends Controller
 {
@@ -17,6 +17,7 @@ class ManageController extends Controller
     }
 
     function registerUser(Request $req){
+
         $validateData = $req->validate([
             'name'  => 'required|regex:/^[a-z A-Z]+$/u',
             'email' => 'required|email',
@@ -28,7 +29,6 @@ class ManageController extends Controller
         ->get();
 
         $res = json_decode($result,true);
-        // print_r($res);
         
         if(sizeof($res)==0){
             $data = $req->input();

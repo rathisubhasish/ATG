@@ -12,12 +12,11 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         
     </head>
-    <body>
+    <body style="background-image:url('images/wall.png'); width:100%; height:100%">
 
 <header>
-<nav class="navbar navbar-expand-lg navbar-dark" style="background:#2F4F4F">
-<a class="navbar-brand" href="public/images/atg.png">
-</a>
+<nav class="navbar navbar-expand-lg navbar-dark" style="background:#BOE0E6">
+<a class="navbar-brand" style="color:white;font-size:25px"><b><i>ATG</i></b></a>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 <span class="navbar-toggler-icon"></span>
 </button>
@@ -26,9 +25,9 @@
 </div>
 <div class="navbar-nav ml-auto">
 @if(Session::get('user'))
-<a class="nav-item nav-link" href="#">Hi, {{Session::get('user')}}</a>
-<!-- <a class="nav-item nav-link" href="logout">Logout</a> -->
-<a class="nav-item btn btn-primary" href="logout">Logout</a>
+<a class="nav-item nav-link mx-4" style="color:white;">Hi, {{Session::get('user')}}</a>
+<hr>
+<a class="nav-item btn btn-primary " href="logout">Logout</a>
 @else
 <a class="nav-item nav-link active" href="/login">Login</a>
 <a class="nav-item nav-link active" href="/register">Register</a>
@@ -38,9 +37,11 @@
 </nav>
 </header>
 <div class="content d-flex justify-content-center">
-@if((Session::get('user'))
-<h1>sadas</h1>
-<h2>sdatsdas</h2>
+@if(Session::get('user'))
+<div>
+<h1 style="font-family:fantasy; padding:150px 550px 0 0; color:darkblue;">Hey, {{Session::get('user')}}</h1>
+<h1 style="font-family:fantasy; padding:10px 550px 0 0; color:darkred;">Welcome To ATG!</h1>
+</div>
 @else
 @yield('content')
 @endif
