@@ -10,7 +10,6 @@ body{
 
 .form-group{
     background-color:white;
-    
 }
 
 .form-control{
@@ -30,8 +29,6 @@ body{
 </button>
 </div>
 @endif
-
-
     <br>
     <br>
     <div class="card shadow-lg  bg-white rounded" style="width: 20rem; height: 20rem; margin:auto; top:30%; border-radius:10px;">

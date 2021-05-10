@@ -16,10 +16,10 @@ class APIKEY
      */
     public function handle(Request $request, Closure $next)
     {
-        $token = $request->header('API_KEY');
-        if($token != 'helloatg'){
-            return response()->json(['status'=>'0','message'=>"Invalid Key"],401);
-        }
+        // $token = $request->header('API_KEY');
+        // if($token != 'helloatg'){
+        //     return response()->json(['status'=>'0','message'=>"Invalid Key"],401);
+        // }
         return $next($request);
     }
 }

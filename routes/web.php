@@ -23,9 +23,8 @@ Route::group(['middleware'=>'customAuth'],function(){
     Route::get('logout','ManageController@logout');
 });
 
-// Route::view('register','register');
-// Route::view('login','login');
-    
+Route::view('register','register');
+Route::view('login','login'); 
 Route::get('auth/login', 'Auth\AuthController@getLogin');
 Route::post('registerUser','App\Http\Controllers\ManageController@registerUser');
 Route::post('loginUser','App\Http\Controllers\ManageController@login');

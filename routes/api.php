@@ -18,6 +18,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/todo/add','App\Http\Controllers\TaskController@create');
-Route::put('/todo/status/{id}','App\Http\Controllers\TaskController@update');
+Route::post('todo/add','App\Http\Controllers\TaskController@storeTask');
+Route::put('todo/status','App\Http\Controllers\TaskController@update');
 ?>
